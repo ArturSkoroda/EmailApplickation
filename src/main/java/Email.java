@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Email {
-    private String firstName;
+    private String firstName ;
     private String lastName;
     private String password;
     private String department;
@@ -28,8 +28,8 @@ public class Email {
     private String setName() {
         System.out.println("enter first name for new employee");
         Scanner in= new Scanner(System.in);
-        String name= in.nextLine();
-        return name;
+        String firstName= in.nextLine();
+        return firstName;
     }
     private String setSurname() {
         System.out.println("enter surname name for new employee");
@@ -46,16 +46,21 @@ public class Email {
                 "\n3 for Accounting" +
                 "\n0 for none  ");
         Scanner in= new Scanner(System.in);
-        int depChoice= in.nextInt();
+        try {
+            int depChoice= in.nextInt();
+
         if (depChoice==0){return "none"; }
         else if (depChoice==1){return "sles";}
         else if (depChoice==2){return "dev";}
         else if (depChoice==3){return "acct";}
-        else {return "";}
-
+        else  {return "";}
+        }catch (Exception e){
+            System.out.println("Please enter number from 0 to 3");
+        }
+        return null;
     }
     private String randomPassword(int length){
-        String paswordSet= "ABCDEFGHIJKLMNOPRSTUWXYZ0123456789!@#$%^&*()_-";
+        String paswordSet= "ABCDEFGHIJKLMNOPRSTQUWXYZabcdefghijklmnoprstquwxyz0123456789!@#$%^&*()_-";
         char[] password= new char[length];
         for(int i=0;i<length;i++){
             int rand=(int) (Math.random()*paswordSet.length());
