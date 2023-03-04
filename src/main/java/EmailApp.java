@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class EmailApp {
     public static void main(String[] args) {
 
@@ -6,6 +8,10 @@ public class EmailApp {
     em1.changePasword("NoweHasło1");
         em1.getAlternativeEmail("cośTam@o2.pl");
         System.out.println(em1.showInfo());
+        ArrayList<Email> allEmail= new ArrayList<Email>();
+        allEmail.add(em1);
+        
+
     }
 }
 
