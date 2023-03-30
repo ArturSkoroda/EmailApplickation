@@ -6,7 +6,7 @@ public class EmailApp {
         Email em1= new Email("Artur", "Skoroda");
     em1.setMailBoxCapacity(500);
     em1.changePasword("NoweHasło1");
-        em1.getAlternativeEmail("cośTam@o2.pl");
+        em1.setAlternativeEmail("cośTam@o2.pl");
         System.out.println(em1.showInfo());
         ArrayList<Email> allEmail= new ArrayList<Email>();
         allEmail.add(em1);

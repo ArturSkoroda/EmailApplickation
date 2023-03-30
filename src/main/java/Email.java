@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Email {
@@ -8,6 +7,7 @@ public class Email {
     private String department;
     private String alternativeEmail;
     private String email;
+    private String newPassword;
     private final String cmopanyName = "newCompany.com";
     private int mailBoxCapacity = 200;
     private final int passwodrLength = 10;
@@ -98,8 +98,8 @@ public class Email {
         return mailBoxCapacity;
     }
 
-    public String getAlternativeEmail(String s) {
-        return alternativeEmail;
+    public String getAlternativeEmail(String alternativeEmail) {
+        return this.alternativeEmail;
     }
 
     public String getPassword() {
@@ -113,4 +113,15 @@ public class Email {
     }
 
 
+    public void setPassword(String password) {
+        this.password = password;
+
+    }
+
+    public void changePassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
+    public String getEmail() {return email;
+    }
 }
